@@ -1,0 +1,27 @@
+﻿--TOP5 ERRORS
+CREATE PROCEDURE "C_DASHBOARD_ERRORCHART"
+(
+
+)
+LANGUAGE SQLSCRIPT
+AS
+BEGIN
+
+    SELECT TOP 5
+        IFNULL(
+            LEFT(TO_NVARCHAR("U_ERRORMSG"),100),
+            'Unknown'
+        ) AS "Label",
+
+        COUNT(*) AS "Value"
+
+    FROM OINV
+
+    WHERE "U_STATUS1" = 'FAILED'
+
+
+    GROUP BY LEFT(TO_NVARCHAR("U_ERRORMSG"),100)
+
+    ORDER BY COUNT(*) DESC;
+
+END;

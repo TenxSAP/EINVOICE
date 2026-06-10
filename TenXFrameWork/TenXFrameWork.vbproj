@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66A264DF-3A1E-4847-BE62-57944594FE7D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TenXFrameWork.SubMain</StartupObject>
+    <RootNamespace>TenXFrameWork</RootNamespace>
+    <AssemblyName>TenXFrameWork</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TenXFrameWork.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TenXFrameWork.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>TenXFrameWork.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>TenXFrameWork.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Business Objects\Common\2.8\managed\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Business Objects\Common\2.8\managed\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Business Objects\Common\2.8\managed\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Ding.QRCode, Version=1.1.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ding.QRCode.1.1.8\lib\netstandard2.0\Ding.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Ding.QRCode.ZXing, Version=1.1.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ding.QRCode.ZXing.1.1.8\lib\netstandard2.0\Ding.QRCode.ZXing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.Cryptography, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Cryptography.9.0.0\lib\net462\Microsoft.Bcl.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.7.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Formats.Asn1, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Formats.Asn1.9.0.0\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Xml.9.0.0\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.1\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.XmlDocument.4.3.0\lib\net46\System.Xml.XmlDocument.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZKWeb.System.Drawing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZKWeb.System.Drawing.4.0.1\lib\net45\ZKWeb.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.7.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.7\lib\net461\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.7.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.7\lib\net461\zxing.presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.ZKWeb.System.Drawing, Version=0.16.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.Bindings.ZKWeb.System.Drawing.0.16.4\lib\net45\ZXing.ZKWeb.System.Drawing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1.StartUp\clsWindowWrapper.vb" />
+    <Compile Include="1.StartUp\MainCls.vb" />
+    <Compile Include="1.StartUp\Module1.vb" />
+    <Compile Include="2.Utilities\TLV.vb" />
+    <Compile Include="2.Utilities\Utilities.vb" />
+    <Compile Include="3.DatabaseCreation\DatabaseCreation.vb" />
+    <Compile Include="4.BusinessClasses\03.Standard Transactions\clsARCreditMemo.vb" />
+    <Compile Include="4.BusinessClasses\03.Standard Transactions\clsARDownPayment.vb" />
+    <Compile Include="4.BusinessClasses\03.Standard Transactions\clsARInvoice.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\Cfrm_LicenceAdministrationNew.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\cfrm_LicenseAdministration.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsApproval.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsApprovalDecision.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsAPPROVALSTAGES.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsAPPROVALTEMP.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsCorporateTaxCalcu.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsCorporateTaxConf.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsCorporateTexConfig.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsCorpTax.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsCropTaxMstr.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsDraftProcedureStages.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\CLSEinvoiceButton.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsEstimation.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsFtaVat.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsFtaVatMstr.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsGRID.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsGRIDES.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsInvoice.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsInvoiceModel.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsInvoicePsoting.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsInvoiceXML.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsInvPost.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsLkMstr.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsMenuSettings.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsOnboarding.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsPayLoad.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsPayloadD.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\clsSAPAlertWindow.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsVatReports.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\ClsVIEWFORAPP.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\DeviceMaster.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\FlickINVModel.vb" />
+    <Compile Include="4.BusinessClasses\04.Addon Forms\LinkMaster.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="5.XML\BusinessObjects.Enterprise.Sdk.fssl.netmodule" />
+    <None Include="5.XML\BusinessObjects.Enterprise.Sdk.ZipLib.netmodule" />
+    <None Include="5.XML\Invoice Posting.b1s" />
+    <None Include="5.XML\Onboarding.b1s" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SQLQuery\VatReportFiling.Sql" />
+    <EmbeddedResource Include="SQLQuery\ARCreditnote.sql" />
+    <EmbeddedResource Include="SQLQuery\TNXPLByBranch.sql" />
+    <Content Include="5.XML\CorporatetaxMstr.xml" />
+    <EmbeddedResource Include="5.XML\CorpTax.xml" />
+    <EmbeddedResource Include="5.XML\Device.xml" />
+    <Content Include="5.XML\FtavatMstr.xml" />
+    <EmbeddedResource Include="5.XML\LicenceNew.xml" />
+    <Content Include="5.XML\Linkmaster.xml" />
+    <EmbeddedResource Include="5.XML\LinkMstr.xml" />
+    <EmbeddedResource Include="SQLQuery\Corporate.sql" />
+    <EmbeddedResource Include="SQLQuery\VatReport.sql" />
+    <EmbeddedResource Include="SQLQuery\Tnx_Branch.sql" />
+    <EmbeddedResource Include="SQLQuery\EInvoice.sql" />
+    <EmbeddedResource Include="SQLQuery\CorporatetaxFiling.sql" />
+    <EmbeddedResource Include="SQLQuery\TNX_VatReturnRtp.sql" />
+    <EmbeddedResource Include="SQLQuery\VatReport Approved.sql" />
+    <EmbeddedResource Include="SQLQuery\VatReportOandP.sql" />
+    <EmbeddedResource Include="5.XML\CorporateTaxCalculation.xml" />
+    <EmbeddedResource Include="5.XML\CorporateTaxConfiguration.xml" />
+    <EmbeddedResource Include="5.XML\VATReport.xml" />
+    <EmbeddedResource Include="SQLQuery\PayloadData.txt" />
+    <EmbeddedResource Include="5.XML\PayLoadD.xml" />
+    <EmbeddedResource Include="5.XML\Approval1.xml" />
+    <EmbeddedResource Include="5.XML\ApprovalD.xml" />
+    <EmbeddedResource Include="5.XML\Approvalstages.xml" />
+    <EmbeddedResource Include="5.XML\ApprovalTemplates.xml" />
+    <EmbeddedResource Include="5.XML\DraftStage.xml" />
+    <EmbeddedResource Include="5.XML\grid.xml" />
+    <EmbeddedResource Include="5.XML\VIEWW.xml" />
+    <EmbeddedResource Include="5.XML\FtaVat.xml" />
+    <EmbeddedResource Include="SQLQuery\CorporateTaxDocuments-Approved.sql" />
+    <EmbeddedResource Include="SQLQuery\CorporateTaxDocuments-Open.sql" />
+    <EmbeddedResource Include="SQLQuery\CorporatetaxJEpost.sql" />
+    <EmbeddedResource Include="SQLQuery\EInvoicepending.sql" />
+    <EmbeddedResource Include="SQLQuery\EInvoiceposted.sql" />
+    <EmbeddedResource Include="SQLQuery\Salesordercreated.sql" />
+    <EmbeddedResource Include="SQLQuery\TNX_EINVOICE_TN.sql" />
+    <EmbeddedResource Include="SQLQuery\TNX_ZATCA_ORIN.sql" />
+    <EmbeddedResource Include="SQLQuery\SBO_SP_TransactionNotification.sql" />
+    <EmbeddedResource Include="5.XML\InvoicingConfiguration.xml" />
+    <EmbeddedResource Include="5.XML\PayResponse.xml" />
+    <EmbeddedResource Include="5.XML\MenuSettings.xml" />
+    <Content Include="5.XML\XmlDocument.cs" />
+    <EmbeddedResource Include="SQLQuery\C_CORP_EXCEPTIONS.sql" />
+    <EmbeddedResource Include="SQLQuery\C_CORP_ADJUSTMENTBREAKDOWN.sql" />
+    <EmbeddedResource Include="SQLQuery\C_CORP_COMPUTATION.sql" />
+    <EmbeddedResource Include="SQLQuery\C_CORP_LIABILITYTREND.sql" />
+    <EmbeddedResource Include="SQLQuery\C_CORP_MONTHLYTAXABLEINCOME.sql" />
+    <EmbeddedResource Include="SQLQuery\C_CORP_LOADKPIS.sql" />
+    <EmbeddedResource Include="SQLQuery\C_VAT_LOADKPI.sql" />
+    <EmbeddedResource Include="SQLQuery\C_VAT_MONTHLYVATCHART.sql" />
+    <EmbeddedResource Include="SQLQuery\C_VAT_BUSINESSUNIT.sql" />
+    <EmbeddedResource Include="SQLQuery\C_VAT_EXCEPTIONSUMMARY.sql" />
+    <EmbeddedResource Include="SQLQuery\C_VAT_FILLINGREADINESS.sql" />
+    <EmbeddedResource Include="SQLQuery\C_VAT_EXCEPTIONDETAILS.sql" />
+    <EmbeddedResource Include="SQLQuery\C_DASHBOARD_EINVOICEKPI.sql" />
+    <EmbeddedResource Include="SQLQuery\C_DASHBOARD_STATUSMIX.sql" />
+    <EmbeddedResource Include="SQLQuery\C_DASHBOARD_TREND_CHART.sql" />
+    <EmbeddedResource Include="SQLQuery\C_DASHBOARD_ERROR_CHART.sql" />
+    <EmbeddedResource Include="SQLQuery\C_DASHBOARD_RECENTFAILURES.sql" />
+    <EmbeddedResource Include="SQLQuery\C_DASHBOARD_ERRORCHART.sql" />
+    <Content Include="SQLQuery\SBO_SP_TransactionNotification.txt" />
+    <EmbeddedResource Include="SQLQuery\TNX_ZATCA_OINV.sql" />
+    <EmbeddedResource Include="5.XML\Estimation.xml" />
+    <EmbeddedResource Include="5.XML\Invoice_Posting.xml" />
+    <EmbeddedResource Include="5.XML\OnBoarding.xml" />
+    <EmbeddedResource Include="5.XML\InvoiceForm.xml" />
+    <Content Include="5.XML\Invoice_Posting - Copy.srf" />
+    <Content Include="5.XML\Simplified_Invoice.xml" />
+    <Content Include="bin\x64\Debug\Menu.xml" />
+    <Content Include="5.XML\BusinessObjects.Enterprise.Sdk.dll" />
+    <Content Include="5.XML\CrystalDecisions.Enterprise.InfoStore.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="4.BusinessClasses\01.Setup\" />
+    <Folder Include="4.BusinessClasses\02.Standard Masters\" />
+    <Folder Include="6.CrystalReports\Forms\" />
+    <Folder Include="6.CrystalReports\ReportClasses\" />
+    <Folder Include="6.CrystalReports\Reports\" />
+    <Folder Include="6.CrystalReports\XSD\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SAPbobsCOM">
+      <Guid>{FC8030BE-F5D2-4B8E-8F92-44228FE30100}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SAPbouiCOM">
+      <Guid>{6048236A-956D-498D-A6F1-9C81C13AB6E8}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
