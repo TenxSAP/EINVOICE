@@ -2074,9 +2074,6 @@ SAPbobsCOM.BoObjectTypes.BoRecordset)
         End Try
     End Sub
 
-
-
-
     Function GetNetProfit(ByVal FDate As String, ByVal TDate As String, ByVal Branch As String) As Double
 
         Dim Profit As Double = 0
